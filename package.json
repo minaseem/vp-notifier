@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "vp-notifier"
+    "url": "https://github.com/minaseem/vp-notifier.git"
   },
   "author": "Imamudin Naseem <naseem1992@gmail.com>",
   "license": "ISC"
