@@ -1,0 +1,22 @@
+{
+  "name": "vp-notifier",
+  "version": "1.0.0",
+  "description": "web component that dispatches an event when its enters viewport",
+  "keywords": [
+    "intersection",
+    "viewport",
+    "lazy",
+    "vp-notifier",
+    "web-components"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "vp-notifier"
+  },
+  "author": "Imamudin Naseem <naseem1992@gmail.com>",
+  "license": "ISC"
+}
