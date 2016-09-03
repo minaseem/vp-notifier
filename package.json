@@ -1,6 +1,6 @@
 {
   "name": "vp-notifier",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "web component that dispatches an event whenever it comes in and goes out of viewport",
   "keywords": [
     "intersection",
