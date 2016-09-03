@@ -6,16 +6,20 @@
 (function () {
   'use strict'
   const proto = {
-    onVPEnter (changes) {
+    onVisibilityChange (changes) {
       const intersectionRect = changes[0].intersectionRect
       if (intersectionRect.height * intersectionRect.width > 0) {
         this.dispatchEvent(this.__onVPEnter)
       }
+      else {
+        this.dispatchEvent(this.__onVPExit)
+      }
     },
     createdCallback () {
       this.__onVPEnter = new CustomEvent('onVPEnter')
+      this.__onVPExit = new CustomEvent('onVPExit')
       this.style.display = 'block'
-      this.observer = new IntersectionObserver(this.onVPEnter.bind(this))
+      this.observer = new IntersectionObserver(this.onVisibilityChange.bind(this))
     },
     attachedCallback () {
       this.observer.observe(this)
