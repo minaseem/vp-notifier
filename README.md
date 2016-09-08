@@ -1,13 +1,13 @@
 # vp-notifier
 
-A web component that emits event `onVPEnter` whenever it comes in, and `onVPExit` whenever it goes out of viewport.
+A web component that emits event `onChange` whenever it comes in or goes out of viewport.
 
-#installation
+#Installation
 
 ```bash
 npm install vp-notifier --save
 ```
-#usage
+#Usage
 
 ```js
 require('vp-notifer')
@@ -17,9 +17,12 @@ require('vp-notifer')
 </x-vp-notifier>
 
 document.querySelector('x-vp-notifier')
-.addEventListener('onVPEnter', callback)
-document.querySelector('x-vp-notifier')
-.addEventListener('onVPExit', callback)
+.addEventListener('onChange', callback)
 
+const callback = x => {
+    const rect = x.detail.intersectionRect
+    rect.height * rect.width === 0 // component went out of viewport
+    rect.height * rect.width > 0   // component came inside viewport
+}
 
 ```
